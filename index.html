@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+    download("sugoma.txt", "nuts");
+  </script>
   <title>the a blue zenith</title>
   <meta http-equiv = "refresh" content = "0; url = https://discord.gg/RPN7VVqPXV"/>
   <meta property="og:type" content="website">
